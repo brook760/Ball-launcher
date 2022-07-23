@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class BallHandler : MonoBehaviour
 {
     [SerializeField] private GameObject BallPrefab;
+    //[SerializeField] private GameObject Blocks;
     [SerializeField] private Rigidbody2D Pivot;
     [SerializeField] protected float detachDelay;
     [SerializeField] protected float respawnDelay;
@@ -61,7 +62,6 @@ public class BallHandler : MonoBehaviour
     {
         currentBallSpring.enabled = false;
         currentBallSpring = null;
-
         Invoke(nameof(SpawnNewBall), respawnDelay);
     }
 }
